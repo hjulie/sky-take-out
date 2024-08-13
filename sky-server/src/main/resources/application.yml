@@ -37,3 +37,13 @@ sky:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+  qiniuoss:
+    accessKey: j3MGt0eI33VJqjuxSI83O1TsMsvd1J18gSwJmSAe
+    secretKey: HG8McFP77XZbfS_e-hmTOYzrPxp7WMqbfpCtwKhM
+    bucket: julie2hj
+    domin: shqqz293q.hd-bkt.clouddn.com
+  alioss:
+    endpoint: ${sky.alioss.endpoint}
+    access-key-id: ${sky.alioss.access-key-id}
+    access-key-secret: ${sky.alioss.access-key-secret}
+    bucket-name: ${sky.alioss.bucket-name}
