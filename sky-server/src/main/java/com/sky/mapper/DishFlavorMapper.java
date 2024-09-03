@@ -17,7 +17,7 @@ public interface DishFlavorMapper {
     void deleteByDishId(Long dishId);
 
     //根据菜品id集合批量删除关联的口味数据
-    void deleteByDishIds(List<Long> dsihIds);
+    void deleteByDishIds(List<Long> dishIds);
 
     //根据菜品ID查询口味数据
     @Select("select * from sky_take_out.dish_flavor where dish_id = #{id}")

@@ -11,3 +11,7 @@ sky:
     access-key-id: LTAI5t6U5NDXvd2xES2mkv1g
     access-key-secret: L3CMlgsBgcuN0IlfBKoygmAM3hGX2b
     bucket-name: hj-hoshi
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
