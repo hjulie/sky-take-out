@@ -10,6 +10,7 @@ import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -55,4 +56,5 @@ public interface DishMapper {
     @Select("select d.* from sky_take_out.dish d left join sky_take_out.setmeal_dish sd on d.id = sd.dish_id " +
             "where sd.setmeal_id = #{setmealId}")
     List<Dish> getBySetmealId(Long setmealId);
+
 }
