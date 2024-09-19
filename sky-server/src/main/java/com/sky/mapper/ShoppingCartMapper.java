@@ -31,4 +31,7 @@ public interface ShoppingCartMapper {
     //根据id删除购物车数据
     @Delete("delete from sky_take_out.shopping_cart where id = #{id}")
     void deleteById(Long id);
+
+    // 将购物车对象批量添加到数据库
+    void insetBatch(List<ShoppingCart> shoppingCartList);
 }
