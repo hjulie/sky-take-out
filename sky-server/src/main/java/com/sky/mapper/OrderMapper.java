@@ -1,10 +1,12 @@
 package com.sky.mapper;
 
 import com.github.pagehelper.Page;
+import com.sky.dto.OrdersConfirmDTO;
 import com.sky.dto.OrdersPageQueryDTO;
 import com.sky.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 @Mapper
 public interface OrderMapper {
@@ -31,4 +33,11 @@ public interface OrderMapper {
     //查询id查询订单
     @Select("select * from sky_take_out.orders where id = #{id}")
     Orders getById(Long id);
+
+    //各个状态的订单数量统计
+    @Select("select count(id) from sky_take_out.orders where status = #{status}")
+    Integer countStatus(Integer status);
+
+
+
 }
